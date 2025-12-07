@@ -1,0 +1,20 @@
+{
+  "name": "Kalkulator Limitu Pracy Tymczasowej",
+  "short_name": "Kalkulator Limitów",
+  "start_url": "./kalkulator%20limitów.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4CAF50",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

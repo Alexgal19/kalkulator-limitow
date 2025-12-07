@@ -6,6 +6,7 @@
     <title>Kalkulator Limitu Pracy Tymczasowej 18/36</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="manifest" href="manifest.json">
     <style>
         /* Ultra nowoczesny design */
         :root {
@@ -362,6 +363,19 @@
 
         function installApp() {
             alert('Funkcja instalacji aplikacji jest w trakcie rozwoju. Wkrótce będzie dostępna!');
+        }
+
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./service-worker.js').then(
+              (registration) => {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+              },
+              (err) => {
+                console.log('ServiceWorker registration failed: ', err);
+              }
+            );
+          });
         }
     </script>
 </body>
